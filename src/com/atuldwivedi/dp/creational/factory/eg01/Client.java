@@ -1,32 +1,13 @@
 package com.atuldwivedi.dp.creational.factory.eg01;
 
-import java.util.Scanner;
-
 public class Client {
 
 	public static void main(String[] args) {
-		EnemyShip enemyShip = null;
+		CarFactory carFactory = new CarFactory();
+		Car car = carFactory.createCar();
 
-		EnemyShipFactory enemyShipFactory = new EnemyShipFactory();
-
-		System.out.println("what type of shipt?(U/R/B): ");
-
-		Scanner scanner = new Scanner(System.in);
-
-		if (scanner.hasNextLine()) {
-			String typeOfShip = scanner.nextLine();
-			enemyShip = enemyShipFactory.makeEnemyShip(typeOfShip);
-		}
-
-		if (enemyShip != null)
-			duStuffEnemy(enemyShip);
+		car.start();
+		car.move();
+		car.stop();
 	}
-
-	private static void duStuffEnemy(EnemyShip enemyShip) {
-		enemyShip.displayEnemyShip();
-		enemyShip.followEnemyShip();
-		enemyShip.enemyShipShoots();
-
-	}
-
 }

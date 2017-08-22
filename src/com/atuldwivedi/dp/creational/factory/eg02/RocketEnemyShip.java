@@ -1,4 +1,4 @@
-package com.atuldwivedi.dp.creational.factory.eg01;
+package com.atuldwivedi.dp.creational.factory.eg02;
 
 public class RocketEnemyShip extends EnemyShip {
 
